@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int n,max=0,j,a,d;
+	cin>>n;
+	int i,time[3601];
+	for(i=0;i<3601;i++){
+	    time[i] = 0;
+	}
+	
+	for(i=0;i<n;i++){
+	    cin>>a>>d;
+	    for(j=a;j<=d;j++){
+	        time[j] +=1;
+	    }
+	}
+	for(i=0;i<3601;i++){
+	    //cout<<time[i]<<" ";
+	    if(time[i] > max){
+	        max = time[i];
+	    }
+	}
+	cout<<max;
+	return 0;
+}
