@@ -1,0 +1,28 @@
+def common_member(a, b):
+    a_set = set(a)
+    b_set = set(b)
+ 
+    if (a_set & b_set):
+        print(a_set & b_set)
+    else:
+        print("No common elements")
+def possible_rotation(a):
+    
+    b = len(a)
+    li=[]
+    for i in range (b):
+        c = a[i:]+a[:i]
+        li.append(c)  
+    return li
+
+if __name__=="__main__":
+    pw=str(input())
+    names=list(map(str,input().split(" ")))
+    ansli=[]
+    ansli=possible_rotation(pw)
+    k=[]
+    
+    
+    
+    k=list(set(names).intersection(ansli))
+    print(*k)
