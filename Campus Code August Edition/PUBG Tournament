@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n,x,i, result=0;
+    cin>>n>>x;
+    int travel[n], acco[n];
+    for(i=0;i<n;i++)
+    {
+        cin>>travel[i]>>acco[i];
+    }
+    result=(x-1200)/n;
+    cout<<result;
+    return 0;
+}
